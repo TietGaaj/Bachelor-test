@@ -1,9 +1,10 @@
 import React from 'react';
+import {textsize} from './storytypes/types'
 import '../index.css';
 
 interface  LinkProps{
     url:string
-    size:string
+    size:textsize
     color:string
     linkname: string
 }
@@ -15,7 +16,7 @@ export const Link = (props : props) => {
     return(
         <a 
         href={url}
-        className={`${size} ${color}`}>
+        className={`${size}`}>
         {linkname}
         </a>
     )
