@@ -2,10 +2,16 @@ import React from 'react';
 
 import './index.css';
 import { Button } from './stories/Button'
+import {ResponsiveNav} from "./stories/ResponsiveNav"
 
 function App() {
   return (
-   <div className='h-full'>
+
+   <div>
+     <ResponsiveNav/>
+
+    
+
       <p>Hej</p>
       <Button
   backgroundColor="#b16565"

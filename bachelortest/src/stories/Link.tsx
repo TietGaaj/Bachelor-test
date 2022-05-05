@@ -2,7 +2,7 @@ import React from 'react';
 import {textsize} from './storytypes/types'
 import '../index.css';
 
-interface  LinkProps{
+export interface LinkProps{
     url:string
     size:textsize
     color:string
