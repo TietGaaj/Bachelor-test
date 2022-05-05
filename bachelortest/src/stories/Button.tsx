@@ -1,48 +1,31 @@
 import React from 'react';
+import { sh , sw, fontfam } from "./storytypes/types";
 import '../index.css';
 
-interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: "bg-yellow-700" | "bg-lime-50" | "bg-emerald-50";
-  /**
-   * How large should the button be?
-   */
-  size?: 25 | 50 | 70;
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
+interface ButtonProps{
+ color : string
+ backgroundColor: string
+ label: string
+ sizingheight: sh
+ sizingwidth: sw
+ fontfami: fontfam
+
+  
   onClick?: () => void;
 }
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({
-  primary = false,
-  size = 50,
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+type Button = ButtonProps
+
+export const Button = (props:ButtonProps) => {
+  const{color,backgroundColor,label,sizingheight,sizingwidth,fontfami} = props
   return (
-    <button
-      type="button"
-      className={['storybook-button', `w-${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
+   <button
+   className={`${sizingheight} ${sizingwidth} ${fontfami}`}
+   style={{color,backgroundColor}}>
+     {label}
+   </button>
+    
+     
+    
   );
 };

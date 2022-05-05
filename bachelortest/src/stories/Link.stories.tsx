@@ -5,7 +5,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Link } from './Link';
 
 export default{
-    title: 'Link',
+    title: 'Simple components/Link',
     Component: Link,
     argTypes:{
         size:{

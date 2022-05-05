@@ -5,11 +5,20 @@ import { Button } from './Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
+  title: 'Simple Components/Button',
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
+    sizingheight:{
+      control:'select',
+      options: ['min-h-1/2' , 'h-1/3' , 'h-2/3' , 'h-1/4' , 'h-2/4' , 'h-3/4' , 'h-1/5']
+  },
+  sizingwidth:{
+    control:'select',
+    options: ['w-1/2' , 'w-1/3' , 'w-2/3' , 'w-1/4' , 'w-2/4' , 'w-3/4' , 'w-1/5']
+},
+
   },
 } as ComponentMeta<typeof Button>;
 
@@ -19,7 +28,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  primary: true,
+  
   label: 'Button',
 };
 
@@ -30,12 +39,12 @@ Secondary.args = {
 
 export const Large = Template.bind({});
 Large.args = {
-  size: 50,
+
   label: 'Button',
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  size: 25,
+
   label: 'Button',
 };
