@@ -7,16 +7,20 @@ interface  LinkProps{
     size:textsize
     color:string
     linkname: string
+    underline: boolean
 }
 
 type props = LinkProps
 
 export const Link = (props : props) => {
-    const {url,size,color,linkname} = props
+    const {url,size,color,linkname, underline} = props
+   
     return(
         <a 
         href={url}
-        className={`${size}`}>
+        className={`${size} ${underline ? "underline":"no-underline"}`}
+        style={{color}}
+        >
         {linkname}
         </a>
     )

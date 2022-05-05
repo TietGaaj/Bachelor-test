@@ -11,6 +11,9 @@ export default{
         size:{
             control:'select',
             options: ["text-sm","text-base","large","text-lg","text-xl"]
+        },
+        color:{
+            control:"color"
         }
     }
 } as ComponentMeta<typeof Link>
@@ -23,4 +26,5 @@ Primary.args = {
     linkname: "Google",
     color:"slate-500",
     size:"text-base",
+    underline:true
 }
