@@ -1,6 +1,6 @@
 import React from 'react';
-import {textsize} from '../storytypes/types'
 import '../../index.css'
+import {textsize} from '../storytypes/types'
 
 export interface LinkProps{
     url:string

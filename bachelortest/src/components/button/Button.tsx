@@ -14,9 +14,9 @@ interface ButtonProps{
   onClick?: () => void;
 }
 
-type Button = ButtonProps
+type IButton = ButtonProps
 
-export const Button = (props:ButtonProps) => {
+export const Button = (props:IButton) => {
   const{color,backgroundColor,label,sizingheight,sizingwidth,fontfami} = props
   return (
    <button

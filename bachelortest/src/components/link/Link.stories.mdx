@@ -1,0 +1,18 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import {Link} from "./Link"
+
+<Meta title="Component/Input" component={Input} />
+
+#Link
+The Link component is fully responsive. Configure how u want the link and copy it into 
+the component where u need it. 
+<Canvas>
+<Story name="Input fields">
+<form>
+<Link  url: "www.google.dk",
+    linkname: "Google",
+    color:"slate-500",
+    size:"text-base",
+    underline:true />
+</form>
+</Story>
