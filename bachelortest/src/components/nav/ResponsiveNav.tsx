@@ -1,9 +1,9 @@
 import React from 'react';
-import '../index.css';
+import '../../index.css'
 import {Link} from '../link/Link'
 
 export interface IResponsiveNav{
-    //mobilenav: boolean
+    
     //color: string
     //backgroundColor: string
     //navItems: string[]
