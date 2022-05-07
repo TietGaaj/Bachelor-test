@@ -1,8 +1,8 @@
 import React from 'react';
 
 import './index.css';
-import { Button } from './stories/Button'
-import {ResponsiveNav} from "./stories/ResponsiveNav"
+import { Button } from './components/button/Button'
+import {ResponsiveNav} from "./components/nav/ResponsiveNav"
 
 function App() {
   return (

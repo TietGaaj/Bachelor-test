@@ -1,5 +1,5 @@
 import React from 'react';
-import { sh , sw, fontfam } from "./storytypes/types";
+import { sh , sw, fontfam } from "../storytypes/types";
 import '../index.css';
 
 interface ButtonProps{

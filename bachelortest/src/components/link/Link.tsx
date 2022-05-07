@@ -1,5 +1,5 @@
 import React from 'react';
-import {textsize} from './storytypes/types'
+import {textsize} from '../storytypes/types'
 import '../index.css';
 
 export interface LinkProps{
