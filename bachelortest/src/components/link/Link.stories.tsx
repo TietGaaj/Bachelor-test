@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from "react";
 
+import { textpair } from "../storytypes/types";
 import { Link } from "./Link";
-import { textpair } from "./storytypes/types";
 
 export default {
   title: "Simple components/Link",
@@ -10,9 +10,9 @@ export default {
   argTypes: {
     size: {
       control: "select",
-      options: [textpair.Small.class,textpair.Base.class,textpair.Large.class,textpair.XL.class]
+      options: [textpair.Small.class, textpair.Base.class, textpair.Large.class, textpair.XL.class],
       labels: {
-        "Small":textpair.Small.class,
+        Small: textpair.Small.class,
         Base: "text-base",
         Large: "text-lg",
         XL: "text-xl",
@@ -32,5 +32,5 @@ Primary.args = {
   linkname: "Google",
   color: "slate-500",
   size: "text-base",
-  underline: true,
+  underline: false,
 };
