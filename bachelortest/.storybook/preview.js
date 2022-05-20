@@ -1,4 +1,4 @@
-import "../src/styles/tailwind.css";
+
 
 export const simple = "Simple Components/"
 

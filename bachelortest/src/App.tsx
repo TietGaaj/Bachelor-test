@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './index.css';
+
+import {ResponsiveNav} from "./components/nav/ResponsiveNav"
+import {Layout} from "././components/layout/Layout"
+import {LayoutContainer} from "././components/layout/LayoutContainer"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className='text-9xl'>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+     <div className='min-w-full'>
+     <ResponsiveNav/>
+     <LayoutContainer/>
+     </div>
+     
+   
+   
+  )
 }
+
+    
+  
 
 export default App;
