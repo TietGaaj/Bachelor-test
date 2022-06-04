@@ -1,6 +1,6 @@
 
 
-export const simple = "Simple Components/"
+
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

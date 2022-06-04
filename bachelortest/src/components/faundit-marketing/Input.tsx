@@ -7,22 +7,19 @@ interface InputStyle{
     backGround : string
     textColor : string
     siZe : 'Full-width' | 'Half-Width' | '1/4-Width'
-
-}
-
-interface InputProps{
     fieldName:string
     required : boolean
     value:string
 
-    onChange?: () => void
 }
 
-type InputType = InputStyle & InputProps
+
+
+type InputType = InputStyle
 
 
 export const Input = (props:InputType) =>{
-    const{rounded,backGround,textColor,fieldName,required,value,onChange,siZe} = props
+    const{rounded,backGround,textColor,fieldName,required,value,siZe} = props
     const backgroundColor : any = backGround
     const color : any = textColor
 
@@ -53,8 +50,7 @@ export const Input = (props:InputType) =>{
                   required={required}
                   placeholder={fieldName}
                   name={fieldName}
-                  onChange={() => onChange}
-                />
+                 />
                 </div>
               )
 }

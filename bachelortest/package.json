@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^1.6.4",
+    "@heroicons/react": "^1.0.6",
+    "@material-tailwind/react": "^1.0.3",
     "@storybook/addon-postcss": "^2.0.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -14,6 +17,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
+    "tw-elements": "^1.0.0-alpha12",
     "typescript": "^4.6.4",
     "web-vitals": "^2.1.4"
   },
@@ -67,7 +71,8 @@
     "@storybook/testing-library": "0.0.11",
     "autoprefixer": "^10.4.7",
     "chromatic": "^6.5.4",
-    "postcss": "^8.4.13",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^9.1.0",
     "tailwindcss": "^3.0.24",
     "webpack": "^5.72.0"
   }

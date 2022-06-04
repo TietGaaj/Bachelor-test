@@ -17,17 +17,19 @@ export default{
         },
         textColor:{
             control:"color"
-        }
+        },
+    docs:{description:{ component: 'Text input - Use both in Faundit Marketing and Faundit App'},}
     }
 } as ComponentMeta<typeof Input>
 
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
+
 export const Primary = Template.bind({});
 Primary.args = {
     rounded : false,
     fieldName: "Google",
-    backGround:"bg-slate-500",
+    backGround:"faunditprime",
     textColor:'text-black',
     siZe:"Half-Width",
     value:'Something',
