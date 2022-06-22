@@ -1,51 +1,54 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import react from 'react'
+import react from 'react';
 import '../../index.css'
+import {layoutstyle}  from '../storytypes/expObj';
 
 interface InputStyle{
     rounded:boolean
-    backGround : string
-    textColor : string
-    siZe : 'Full-width' | 'Half-Width' | '1/4-Width'
+    size : string
     fieldName:string
     required : boolean
     value:string
+   
+    type : string
 
 }
 
 
 
-type InputType = InputStyle
+type InputType = InputStyle 
 
 
 export const Input = (props:InputType) =>{
-    const{rounded,backGround,textColor,fieldName,required,value,siZe} = props
-    const backgroundColor : any = backGround
-    const color : any = textColor
+    const{rounded,fieldName,required,value,size,type} = props
+    const {full,third,fourth,half} = layoutstyle.sizing.width
+    
+   
 
-    const size = () =>{
-        if(siZe === 'Full-width'){
-            console.log('fill')
-            return 'min-w-full';
-        }
-        else if(siZe === 'Half-Width'){
-            console.log('half')
-            return 'w-1/2';
-        }
-        else if(siZe === '1/4-Width'){
-            console.log('fourth')
-            return 'w-1/4';
-        }
+    console.log(size)
 
+    const sizewidth = (size: string) =>{
+        switch(size){
+            case "full":
+                return full
+            case "half" :
+                return half 
+            case "third":
+                return third
+            case "fourth":
+                return fourth
+        }
     }
+
+    
 
     return(
 
               
               <div>
                 <input
-                  className={`text-base sm:text-sm xl:text-xl text-left  bg-[${backGround}] ${rounded ? 'rounded' : 'rounded-none' } ${size()}`}
-                  style={{backgroundColor,color}}
+                  className={`py-2 px-3 shadow appearance-none border text-base sm:text-sm xl:text-xl text-left ${rounded ? 'rounded' : 'rounded-none' } ${sizewidth(size)}`}
+                  type = {type}
                   value={value}
                   required={required}
                   placeholder={fieldName}

@@ -2,16 +2,21 @@ import React from 'react';
 
 import './index.css';
 
-import {ResponsiveNav} from "./components/nav/ResponsiveNav"
-import {Layout} from "././components/layout/Layout"
-import {LayoutContainer} from "././components/layout/LayoutContainer"
+import { layoutstyle } from './components/storytypes/expObj';
 
 function App() {
+  
+  
+
+ 
+
+
+  
+  
   return (
 
-     <div className='min-w-full'>
-     <ResponsiveNav/>
-     <LayoutContainer/>
+     <div className={`${'bg-blue-grey-900'} ${layoutstyle.sizing.height.full} ${layoutstyle.sizing.width.half}`}>
+     <div>Hej</div>
      </div>
      
    

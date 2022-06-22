@@ -1,7 +1,6 @@
-const withMT = require("@material-tailwind/react/utils/withMT");
 
-module.exports = withMT({
-  content: ["./src/**/*.{js,jsx,ts,tsx}",'./node_modules/tw-elements/dist/js/**/*.js'],
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}","./node_modules/flowbite/**/*.js"],
   theme: {
     screens: {
     sm: '480px',
@@ -22,7 +21,5 @@ module.exports = withMT({
   },
     extend: {},
   },
-  plugins: [
-    require('tw-elements/dist/plugin')
-  ],
-});
+  plugins: [],
+}
